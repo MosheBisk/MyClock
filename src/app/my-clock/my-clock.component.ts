@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Input } from "@angular/core";
 
 @Component({
   selector: "my-clock",
@@ -7,6 +7,7 @@ import { Component, OnInit } from "@angular/core";
 })
 export class MyClockComponent {
   time: string;
+  @Input() city:string;
   constructor() {
     this.setTime();
     setInterval(() => this.setTime(), 1000);
